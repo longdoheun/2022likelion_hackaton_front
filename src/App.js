@@ -1,5 +1,5 @@
 // component
-import BalanceGame from "./js/BalanceGame"
+import BalanceGame from "./components/BalanceGame"
 
 // css
 import './App.css';
