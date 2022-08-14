@@ -1,9 +1,8 @@
 // component
-import BalanceGame from "./components/BalanceGame"
+import BalanceGame from "./components/BalanceGame/BalanceGame"
 
 // css
 import './App.css';
-import "./css/BalanceGame.css"
 
 function App() {
   return (

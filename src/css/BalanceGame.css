@@ -1,70 +1,59 @@
-
-.BalanceGame {
+.balance-game {
   width: 328px;
-  height: 194px;
-  background: #FFFFFF;
-  /* shadow */
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.05);
-  border-radius: 7px;
+  height: 147px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+  border-radius: 7px 7px 0px 0px;
 }
-.BG-upper{
+.balance-game__upper {
   width: 90%;
   display: flex;
   justify-content: space-between;
   height: 14px;
   padding: 10px 0 0 0;
 }
-.BG-tag {
-  font-family: 'Roboto';
+.balance-game__tag {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   /* or 11px */
-  color: #A9A9A9;
+  color: #a9a9a9;
 }
-.BG-heart{
-  width: 16px;
-  height: 14px;
+.balance-game__heart {
+  position: relative;
+  top: 11px;
+  left: 148px;
+  cursor: pointer;
 }
-.BG-context{
-  font-family: 'Roboto';
+.balance-game__context {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #575757;
 }
-.BG-center{
+.balance-game__center {
   display: flex;
 }
-.BG-bar{
+.balance-game__bar {
   width: 132px;
   height: 40px;
   border-radius: 30px 0px 0px 30px;
 }
-#left-bar{
-  background: linear-gradient(90deg, #96D6DF 0%, rgba(180, 239, 232, 0) 100%);
+#left-bar {
+  background: linear-gradient(90deg, #96d6df 0%, rgba(180, 239, 232, 0) 100%);
 }
-#right-bar{
-  background: linear-gradient(90deg, #F1968A -3.03%, rgba(255, 133, 116, 0) 100%);
+#right-bar {
+  background: linear-gradient(
+    90deg,
+    #f1968a -3.03%,
+    rgba(255, 133, 116, 0) 100%
+  );
   transform: rotate(-180deg);
 }
-#right-bar > span{
+#right-bar > span {
   transform: rotate(-180deg);
-}
-.vote-btn{
-  width: 100%;
-  padding: 13px 0;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-  color: #787878;
-  border-top: 1px solid #E4E4E4;
 }
