@@ -1,13 +1,17 @@
 // component
-import BalanceGame from "./components/BalanceGame/BalanceGame"
-
-// css
-import './App.css';
+import BalanceGameCard from "./components/BalanceGame/BalanceGameCard";
+import BalanceGameList from "./components/BalanceGame/BalanceGameList";
+import BalanceGameMyList from "./components/BalanceGame/BalanceGameMyList";
+import "./App.css";
+import Comments from "./components/BalanceGame/Comments";
 
 function App() {
   return (
     <div className="App">
-      <BalanceGame/>
+      <BalanceGameCard className="Heart" />
+      <BalanceGameList />
+      <BalanceGameMyList />
+      <Comments />
     </div>
   );
 }

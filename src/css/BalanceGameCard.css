@@ -1,0 +1,59 @@
+.balance-game-card {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balance-game-card__upper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  height: 14px;
+  padding: 8px 0 0 0;
+}
+.balance-game-card__tag_user {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  color: #a9a9a9;
+}
+.balance-game-card__context {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 9px 0px 20px 0px;
+  color: #575757;
+}
+.balance-game-card__center {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #460800;
+  display: flex;
+  line-height: 40px;
+}
+.balance-game-card__bar {
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+}
+#left-bar {
+  background: linear-gradient(to right, #96d6df, white);
+  border-radius: 30px 0px 0px 30px;
+  padding-left: 15px;
+}
+#right-bar {
+  background: linear-gradient(to left, #f1968a, white);
+  border-radius: 30px 30px 30px 0px;
+  text-align: right;
+  padding-right: 15px;
+}
+.balance-game-card__vs {
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 800;
+  font-size: 40px;
+}
