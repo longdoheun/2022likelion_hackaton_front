@@ -1,0 +1,21 @@
+.discuss-alert {
+  margin-top: 16px;
+  width: 284.34px;
+}
+.alert-text-container {
+  height: 123px;
+  text-align: center;
+  justify-content: center;
+}
+.discuss-alert-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #7a7a7a;
+}
+.discuss-alert-text > strong {
+  color: #cc0000;
+}

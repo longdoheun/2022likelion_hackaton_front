@@ -1,0 +1,99 @@
+.discuss-vote-questioner {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 114.19%;
+  /* or 11px */
+  color: #c0c0c0;
+}
+.discuss-vote-container {
+  margin-top: 16px;
+}
+.discuss-vote {
+  margin-top: 4px;
+  width: 328px;
+  /* height: 194px; */
+}
+.discuss-vote-fin {
+  margin-top: 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #7a7a7a;
+}
+
+.diccuss-vote-guide {
+  margin-top: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #7a7a7a;
+}
+.diccuss-vote-review {
+  margin-top: 42px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #7a7a7a;
+}
+.discuss-vote-center {
+  margin-top: 12px;
+  height: 120px;
+  align-items: center;
+}
+.discuss-vote-selection {
+  width: 120px;
+  height: 120px;
+  background: #f5f5f5;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+  border-radius: 7px;
+}
+.diccuss-vote-selection-username {
+  margin-top: 23px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #7a7a7a;
+}
+.diccuss-vote-selection-choose {
+  margin-top: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #7a7a7a;
+}
+.diccuss-vote-btn {
+  margin-top: 15px;
+}
+.discuss-vote-versus {
+  margin: 0 6px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
+  color: #575757;
+}

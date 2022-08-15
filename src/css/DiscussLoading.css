@@ -1,0 +1,36 @@
+.discuss-loading {
+  margin-top: 10px; /* 보기 좋으라고 한거임 */
+  width: 332px;
+  height: 448px;
+}
+.discuss-loading-img {
+  margin-top: 23.75px;
+  width: 68.41px;
+  height: 66.43px;
+}
+.discuss-loading-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #787878;
+  margin-top: 124px;
+}
+.discuss-exit-btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
+  color: #787878;
+  padding: 6px 27px 7px 27px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 0.8px solid #d4d4d4;
+  margin-top: 146.82px;
+}

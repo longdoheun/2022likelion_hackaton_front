@@ -1,5 +1,26 @@
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+/* 고대비용 임시 색상 */
+.App {
+  background-color: #eee;
 }

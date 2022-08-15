@@ -1,0 +1,71 @@
+.discuss-card {
+  margin-top: 16px;
+  width: 328px;
+  /* height: 194px; */
+}
+
+.discuss-card-upper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  height: 14px;
+  padding: 13px 0 0 0;
+}
+.discuss-card-hashtag {
+  font-size: 10px;
+  color: #a9a9a9;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+.discuss-card-heart {
+  width: 16px;
+  height: 14px;
+}
+.discuss-card-context {
+  text-align: center;
+  width: 90%;
+  height: 108px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #575757;
+  justify-content: center;
+}
+.discuss-card-lower {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  text-align: right;
+  color: #929292;
+}
+.dicuss-card-btn {
+  margin-top: 3px;
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+}
+.dicuss-card-btn > div {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  color: #787878;
+  padding: 13px 0px;
+  text-align: center;
+}
+.join-btn {
+  width: 50%;
+}
+.watch-btn {
+  width: 50%;
+  border-left: 1px solid #e4e4e4;
+}

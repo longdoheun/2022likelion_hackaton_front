@@ -1,0 +1,43 @@
+.talk-con {
+  width: 97%;
+  padding-top: 18px;
+  /* background-color: blue; */
+}
+.talk-profile {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.talk-cover {
+  justify-content: flex-start;
+  /* background-color: red; */
+}
+
+.talk-content {
+  max-width: 209px;
+  border-radius: 7px;
+  padding: 5px;
+  background: #d9d9d9;
+  /* background-color: cyan; */
+}
+.talk-content-text {
+  /* background-color: #fff; */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #7a7a7a;
+}
+.polygon {
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #d9d9d9;
+  transform: rotate(180deg);
+}
