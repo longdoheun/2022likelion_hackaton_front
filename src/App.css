@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: white;
 }
 .flex-c {
   display: flex;
@@ -22,6 +21,3 @@
 }
 
 /* 고대비용 임시 색상 */
-.App {
-  background-color: #eee;
-}
