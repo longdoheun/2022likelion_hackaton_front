@@ -12,6 +12,7 @@ import Main from "./components/Main";
 //css
 import "./App.css";
 import "./css/Header.css";
+import DiscussTalk from "./components/Discuss/DiscussTalk";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
           <Route path="/discuss" element={<DiscussMain />}></Route>
+          <Route path="/discuss/talk" element={<DiscussTalk />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
 

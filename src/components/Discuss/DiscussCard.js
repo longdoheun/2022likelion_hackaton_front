@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../../UI/Card";
 import "../../css/DiscussCard.css";
 import Heartbtn from "../../UI/HeartBtn";
-
+import { Link } from "react-router-dom";
 export default function DiscussCard(props) {
   const { } = props;
 
@@ -34,9 +34,13 @@ export default function DiscussCard(props) {
       {!isType&&<section className="dicuss-card-btn flex-r">
         <div className="view-btn">자세히 보기</div>
       </section>}
-      {isType&&<section className="dicuss-card-btn flex-r">
-        <div className="join-btn">참여하기</div>
-        <div className="watch-btn">관전하기</div>
+      {isType && <section className="dicuss-card-btn flex-r">
+        <Link to={`/discuss/talk/?content=${DUMMY.context}`}>
+          <div className="join-btn">참여하기</div>
+        </Link>
+        <Link to={`/discuss/talk/?content=${DUMMY.context}`}>
+          <div className="watch-btn">관전하기</div>
+        </Link>
       </section>}
     </Card>
   )
