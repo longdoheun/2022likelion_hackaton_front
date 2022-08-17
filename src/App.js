@@ -23,8 +23,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
-          <Route path="/discuss" element={<DiscussMain />}></Route>
-          <Route path="/discuss/talk" element={<DiscussTalk />}></Route>
+          <Route path="/discussion" element={<DiscussMain />}></Route>
+          <Route path="/discussion/talk" element={<DiscussTalk />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
 
