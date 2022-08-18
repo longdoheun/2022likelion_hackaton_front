@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../../UI/Card";
 import "../../css/BalanceGameCard.css";
 import HeartBtn from "../../UI/HeartBtn";
 import BalanceGameCenterBefore from "./BalanceGameCenterBefore";
 import BalanceGameCenterAfter from "./BalanceGameCenterAfter";
 import Vote from "./Vote";
+import axios from "axios";
 
 function BalanceGameCard(props) {
+  // const [balanceGameVoter, setBalanceGameVoter] = useState([]);
+  // useEffect(() => {
+  //   axios.get("url").then(({ voteData }) => setBalanceGameVoter(voteData));
+  // }, []);
+
   const DUMMY_LISTS = [
     {
       id: "id1",
@@ -30,29 +36,36 @@ function BalanceGameCard(props) {
     },
   ];
 
-  const [isLike, setLike] = useState(false);
-  const likeToggleHandler = () => {
-    setLike((isLike) => !isLike);
-  };
+  const DUMMY_VOTER = [
+    ["e1", "e3", "e6", "e8"],
+    ["e2", "e4", "e5"],
+  ];
 
   const classes = "balance-game-card " + props.className;
 
   const [isVote, setIsVote] = useState(false);
   const [isLeft, setIsLeft] = useState(false);
   const [isRight, setIsRight] = useState(false);
+  const [leftChoice, setLeftChoice] = useState(DUMMY_VOTER[0].length);
+  const [rightChoice, setRightChoice] = useState(DUMMY_VOTER[1].length);
+  const [totalVote, setTotalVote] = useState(leftChoice + rightChoice);
+  // const [leftChoice, setLeftChoice] = useState(balanceGameVoter[0].length);
+  // const [rightChoice, setRightChoice] = useState(balanceGameVoter[1].length);
 
-  const [leftChoice, setLeftChoice] = useState(0);
-
-  const [rightChoice, setRightChoice] = useState(0);
-
+  const [isLike, setLike] = useState(false);
+  const likeToggleHandler = () => {
+    setLike((isLike) => !isLike);
+  };
   const leftClickHandler = () => {
     setLeftChoice((leftChoice) => leftChoice + 1);
+    setTotalVote((totalVote) => totalVote + 1);
     setIsVote(!isVote);
     setIsLeft(true);
   };
 
   const rightClickHandler = () => {
     setRightChoice((RightChoice) => RightChoice + 1);
+    setTotalVote((totalVote) => totalVote + 1);
     setIsVote(!isVote);
     setIsRight(true);
   };
@@ -64,6 +77,7 @@ function BalanceGameCard(props) {
     {
       isRight && setRightChoice(rightChoice - 1);
     }
+    setTotalVote((totalVote) => totalVote - 1);
     setIsRight(false);
     setIsLeft(false);
     setIsVote(!isVote);
@@ -108,7 +122,8 @@ function BalanceGameCard(props) {
             DUMMY_LISTS={DUMMY_LISTS}
           />
         )}
-        <div className="balance-game__vote_num">투표자 수 : 0명</div>
+
+        <div className="balance-game__vote_num">투표자 수 : {totalVote}명</div>
         {isVote && (
           <Vote
             className="balance-game__revote"

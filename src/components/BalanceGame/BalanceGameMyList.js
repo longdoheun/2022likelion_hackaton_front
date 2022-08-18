@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../../UI/Card";
 import "../../css/BalanceGameCard.css";
 import HeartBtn from "../../UI/HeartBtn";
 import BalanceGameCenterBefore from "./BalanceGameCenterBefore";
 import Vote from "./Vote";
+import axios from "axios";
 
 function BalanceGameMyList(props) {
-  const DUMMY_LISTS = [
+  // const [myList, setMyList] = useState([]);
+  // useEffect(() => {
+  //   axios.get("url").then(({ myData }) => setBalanceGameVoter(mtData));
+  // }, []);
+
+  const DUMMY_MY_LISTS = [
     {
       id: "id1",
       user: "소고기딱복국",
@@ -36,12 +42,9 @@ function BalanceGameMyList(props) {
 
   const classes = "balance-game-card " + props.className;
 
-  const preventEventHandler = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <>
+    {/* {isLike &&  {myLis.map((list, index) => ())} */}
       <Card className={classes}>
         <section className="balance-game-card__upper">
           <h5 className="balance-game-card__tag_user"></h5>
@@ -52,12 +55,11 @@ function BalanceGameMyList(props) {
           />
         </section>
 
-        <h1 className="balance-game-card__context">{DUMMY_LISTS[0].title}</h1>
+        <h1 className="balance-game-card__context">
+          {DUMMY_MY_LISTS[0].title}
+        </h1>
 
-        <BalanceGameCenterBefore
-          DUMMY_LISTS={DUMMY_LISTS}
-          onclick={preventEventHandler}
-        />
+        <BalanceGameCenterBefore DUMMY_LISTS={DUMMY_MY_LISTS} />
 
         <div className="balance-game__vote_num">투표자 수 : 0명</div>
         <Vote className="balance-game__revote" text="자세히 보기"></Vote>
