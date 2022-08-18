@@ -1,14 +1,17 @@
 .balance-game-card {
-  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.balance-game-list__heart {
+  cursor: pointer;
+  text-align: right;
 }
 .balance-game-card__upper {
   width: 90%;
   display: flex;
   justify-content: space-between;
-  height: 14px;
+  height: 12px;
   padding: 8px 0 0 0;
 }
 .balance-game-card__tag_user {
@@ -27,6 +30,10 @@
   color: #575757;
 }
 .balance-game-card__center {
+  display: flex;
+  flex-direction: column;
+}
+.balance-game-card__main_bar {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -47,13 +54,100 @@
 }
 #right-bar {
   background: linear-gradient(to left, #f1968a, white);
-  border-radius: 30px 30px 30px 0px;
+  border-radius: 0px 30px 30px 0px;
   text-align: right;
   padding-right: 15px;
+}
+.balance-game-card__result_bar {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+#left-bar-result {
+  background: #96d6df;
+  padding-left: 15px;
+  border-radius: 30px 0px 0px 30px;
+}
+#right-bar-result {
+  background: #f1968a;
+  padding-right: 15px;
+  border-radius: 0px 30px 30px 0px;
 }
 .balance-game-card__vs {
   font-family: "Roboto";
   font-style: bold;
   font-weight: 800;
   font-size: 40px;
+}
+.balance-game-card__detail_bar {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  padding: 2px 0px 0px 15px;
+  color: #929292;
+  width: 280px;
+  line-height: 11px;
+}
+.balance-game-card__result_choice {
+  padding-left: 8px;
+  display: flex;
+  width: 280px;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #494949;
+}
+.balance-game__result_turnout {
+  padding-left: 10px;
+  display: flex;
+  width: 280px;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 600;
+  font-size: 20px;
+  color: #494949;
+}
+.balance-game__result_detail {
+  padding-top: 5px;
+  height: 50px;
+  text-align: center;
+  color: #CC0000;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 600;
+  font-size: 24px;
+}
+.balance-game-card__bar_result {
+  cursor: auto;
+}
+.balance-game__revote {
+  width: 280px;
+  cursor: pointer;
+}
+.percentage{
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+.balance-game__vote_num{
+  width: 90%;
+  margin-bottom: 5px;
+  text-align: right;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  color: #929292;
 }

@@ -18,14 +18,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
           <Route path="/discuss" element={<DiscussMain />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
-
       </BrowserRouter>
     </div>
   );

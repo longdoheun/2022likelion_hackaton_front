@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../../UI/Card";
 import "../../css/BalanceGameCard.css";
+import HeartBtn from "../../UI/HeartBtn";
+import BalanceGameCenterBefore from "./BalanceGameCenterBefore";
+import BalanceGameCenterAfter from "./BalanceGameCenterAfter";
+import Vote from "./Vote";
 
 function BalanceGameCard(props) {
   const DUMMY_LISTS = [
@@ -26,39 +30,92 @@ function BalanceGameCard(props) {
     },
   ];
 
+  const [isLike, setLike] = useState(false);
+  const likeToggleHandler = () => {
+    setLike((isLike) => !isLike);
+  };
+
   const classes = "balance-game-card " + props.className;
 
-  const leftClickHandler = () => {};
+  const [isVote, setIsVote] = useState(false);
+  const [isLeft, setIsLeft] = useState(false);
+  const [isRight, setIsRight] = useState(false);
 
-  const rightClickHandler = () => {};
+  const [leftChoice, setLeftChoice] = useState(0);
+
+  const [rightChoice, setRightChoice] = useState(0);
+
+  const leftClickHandler = () => {
+    setLeftChoice((leftChoice) => leftChoice + 1);
+    setIsVote(!isVote);
+    setIsLeft(true);
+  };
+
+  const rightClickHandler = () => {
+    setRightChoice((RightChoice) => RightChoice + 1);
+    setIsVote(!isVote);
+    setIsRight(true);
+  };
+
+  const reVoteHandler = () => {
+    {
+      isLeft && setLeftChoice(leftChoice - 1);
+    }
+    {
+      isRight && setRightChoice(rightChoice - 1);
+    }
+    setIsRight(false);
+    setIsLeft(false);
+    setIsVote(!isVote);
+  };
+
+  const leftTurnout = (
+    (leftChoice / (leftChoice + rightChoice)) *
+    100
+  ).toFixed();
+  const rightTurnout = (
+    (rightChoice / (leftChoice + rightChoice)) *
+    100
+  ).toFixed();
 
   return (
     <>
       <Card className={classes}>
-        <>{props.children}</>
         <section className="balance-game-card__upper">
-          <h5 className="balance-game-card__tag_user">
-            질문자:{DUMMY_LISTS[0].user}
-          </h5>
+          <h5 className="balance-game-card__tag_user"></h5>
+          <HeartBtn
+            className="balance-game-list__heart"
+            isLike={isLike}
+            onclick={likeToggleHandler}
+          />
         </section>
+
         <h1 className="balance-game-card__context">{DUMMY_LISTS[0].title}</h1>
-        <section className="balance-game-card__center">
-          <div
-            className="balance-game-card__bar"
-            id="left-bar"
-            onClick={leftClickHandler}
-          >
-            {DUMMY_LISTS[0].choiceLeft}
-          </div>
-          <div className="balance-game-card__vs">VS</div>
-          <div
-            className="balance-game-card__bar"
-            id="right-bar"
-            onClick={rightClickHandler}
-          >
-            {DUMMY_LISTS[0].choiceRight}
-          </div>
-        </section>
+
+        {isVote ? (
+          <BalanceGameCenterAfter
+            leftClickHandler={leftClickHandler}
+            rightClickHandler={rightClickHandler}
+            DUMMY_LISTS={DUMMY_LISTS}
+            leftTurnout={leftTurnout}
+            rightTurnout={rightTurnout}
+            isVote={isVote}
+          />
+        ) : (
+          <BalanceGameCenterBefore
+            leftClickHandler={leftClickHandler}
+            rightClickHandler={rightClickHandler}
+            DUMMY_LISTS={DUMMY_LISTS}
+          />
+        )}
+        <div className="balance-game__vote_num">투표자 수 : 0명</div>
+        {isVote && (
+          <Vote
+            className="balance-game__revote"
+            onClick={reVoteHandler}
+            text="다시 투표하기"
+          ></Vote>
+        )}
       </Card>
     </>
   );
