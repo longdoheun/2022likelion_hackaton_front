@@ -7,6 +7,7 @@ import SubNavBar from "../../UI/SubNavBar";
 //components
 import DiscussTalk from "./DiscussTalk";
 import DiscussAlert from "./DiscussAlert";
+import DiscussChat from './DiscussChat';
 
 export default function DiscussTalkMain(props) {
   const { } = props;
@@ -42,6 +43,7 @@ export default function DiscussTalkMain(props) {
         setIsAlert={setIsAlert}
       ></DiscussAlert>}
       <DiscussTalk></DiscussTalk>
+      <DiscussChat></DiscussChat>
     </>
   )
 }

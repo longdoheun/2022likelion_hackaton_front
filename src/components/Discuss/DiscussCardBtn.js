@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function DiscussCardBtn(props) {
   const { firstBtn, secondBtn } = props;
-  console.log(firstBtn)
+  // console.log(firstBtn)
   return (
     <section className="dicuss-card-btn-cover flex-r">
       <div
