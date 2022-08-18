@@ -12,14 +12,13 @@ import Main from "./components/Main";
 //css
 import "./App.css";
 import "./css/Header.css";
-import DiscussTalk from "./components/Discuss/DiscussTalk";
 import DiscussResult from "./components/Discuss/DiscussResult";
 import DiscussVote from "./components/Discuss/DiscussVote";
 import DiscussTalkMain from "./components/Discuss/DiscussTalkMain";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex-c">
       <BrowserRouter>
         <Header />
 

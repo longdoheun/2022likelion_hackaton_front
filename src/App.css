@@ -23,3 +23,6 @@ a {
   text-decoration: none;
 }
 /* 고대비용 임시 색상 */
+.App {
+  background-color: #f0f0f0;
+}

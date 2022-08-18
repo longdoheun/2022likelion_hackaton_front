@@ -2,4 +2,26 @@
   font-size: 15px;
   color: inherit;
   text-decoration: inherit;
+  background: #cc0000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.header-con {
+  margin: auto;
+  width: calc(100% - 30px);
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+
+.header-menu {
+  width: 28px;
+  height: 28px;
+}
+
+.header-user {
+  width: 28px;
+  height: 28px;
 }
