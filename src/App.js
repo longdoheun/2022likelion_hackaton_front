@@ -13,6 +13,9 @@ import Main from "./components/Main";
 import "./App.css";
 import "./css/Header.css";
 import DiscussTalk from "./components/Discuss/DiscussTalk";
+import DiscussResult from "./components/Discuss/DiscussResult";
+import DiscussVote from "./components/Discuss/DiscussVote";
+import DiscussTalkMain from "./components/Discuss/DiscussTalkMain";
 
 function App() {
   return (
@@ -24,7 +27,9 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
           <Route path="/discussion" element={<DiscussMain />}></Route>
-          <Route path="/discussion/talk" element={<DiscussTalk />}></Route>
+          <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
+          <Route path="/discussion/vote" element={<DiscussVote />}></Route>
+          <Route path="/discussion/result" element={<DiscussResult />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
 

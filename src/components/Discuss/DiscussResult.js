@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../UI/Card";
 import DiscussFlexCon from "./DiscussFlexCon"
 import "../../css/DiscussResult.css";
+import { Link } from "react-router-dom";
 
 export default function DiscussResult(props) {
   const { } = props;
@@ -35,12 +36,15 @@ export default function DiscussResult(props) {
           rightText={<><strong>{100 - leftRatio}</strong>%</>}
         />
       </section>
-      <div
-        className="discuss-exit-btn"
-        style={{ marginTop: "22px", marginBottom: "29px" }}
-      >
-        나가기
-      </div>
+      <Link to="/discussion">
+        <div
+          className="discuss-exit-btn"
+          style={{ marginTop: "22px", marginBottom: "29px" }}
+        >
+          나가기
+        </div>
+      </Link>
+
     </Card>
   )
 }
