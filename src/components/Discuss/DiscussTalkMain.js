@@ -2,6 +2,7 @@ import { useContext, useEffect, useCallback, useState } from 'react';
 import { useNavigate, useLocation, UNSAFE_NavigationContext as NavigationContext,  } from 'react-router-dom';
 import queryString from 'query-string';
 import usePrompt from './blocker'
+import SubNavBar from "../../UI/SubNavBar";
 
 //components
 import DiscussTalk from "./DiscussTalk";
@@ -15,9 +16,7 @@ export default function DiscussTalkMain(props) {
   const [timeLimit, setTimeLimit] = useState(5000);
   
   const location = useLocation();
-  const qs = queryString.parse(location.search);
-  console.log(qs);
-  // if (Object.keys(qs).length === 0) return;
+  const { content } = queryString.parse(location.search);
 
   useEffect(() => {
     if (timeLimit != 0) {
@@ -34,6 +33,10 @@ export default function DiscussTalkMain(props) {
   usePrompt('지금 나가시면 패배입니다. 진짜로 나가시겠습니까?', timeLimit !== 0);
   return (
     <>
+      <SubNavBar
+        onClick={()=>navigate("/discussion")}
+        text={content}
+      />
       <div>{ timeLimit }</div>
       {isAlert && <DiscussAlert
         setIsAlert={setIsAlert}

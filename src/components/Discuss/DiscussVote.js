@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import queryString from "query-string";
 import Card from "../../UI/Card";
+import SubNavBar from "../../UI/SubNavBar";
 import DiscussVoteSelection from "./DiscussVoteSelection";
 import "../../css/DiscussVote.css";
 
@@ -48,50 +49,56 @@ export default function DiscussVote(props) {
 
 
   return (
-    <div className="discuss-vote-container">
-      <p className="discuss-vote-questioner">
-        질문자: {"귀신이고칼로리"}
-      </p>
-      <Card className={"discuss-vote flex-c"}>
-        <section className="discuss-vote-upper">
-          <h1 className="discuss-vote-fin">
-          토론 종료
-          </h1>
-          <h5 className="diccuss-vote-guide">
-            설득 당했던 입장에 투표해주세요!
-          </h5>
-        </section>
-        <div
-          className="diccuss-vote-review"
-          onClick = {()=>navigate(-1)}
-        >
-          토론 내용 다시보기
-        </div>
-        <section className="discuss-vote-center flex-r">
-          <DiscussVoteSelection
-            username={"귀신이고칼로리"}
-            choose={"이재명"}
-            isSelected={isSelectLeft}
-            setIsSelect={setIsSelectLeft}
-          />
-          <h1 className="discuss-vote-versus">
-            VS
-          </h1>
-          <DiscussVoteSelection
-            username={"곤드레밥길들이기"}
-            choose={"윤석열"}
-            isSelected={isSelectRight}
-            setIsSelect={setIsSelectRight}
-          />
-        </section>
-        <div
-          className="discuss-exit-btn"
-          style={{ marginTop: "42px", marginBottom: "39px" }}
-          onClick={goResult}
-        >
-          확인
-        </div>
-      </Card>
-    </div>
+    <>
+      <SubNavBar
+        onClick={()=>navigate(`/discussion/talk/?content=${content}`)}
+        text={content}
+      />
+      <div className="discuss-vote-container">
+        <p className="discuss-vote-questioner">
+          질문자: {"귀신이고칼로리"}
+        </p>
+        <Card className={"discuss-vote flex-c"}>
+          <section className="discuss-vote-upper">
+            <h1 className="discuss-vote-fin">
+            토론 종료
+            </h1>
+            <h5 className="diccuss-vote-guide">
+              설득 당했던 입장에 투표해주세요!
+            </h5>
+          </section>
+          <div
+            className="diccuss-vote-review"
+            onClick = {()=>navigate(-1)}
+          >
+            토론 내용 다시보기
+          </div>
+          <section className="discuss-vote-center flex-r">
+            <DiscussVoteSelection
+              username={"귀신이고칼로리"}
+              choose={"이재명"}
+              isSelected={isSelectLeft}
+              setIsSelect={setIsSelectLeft}
+            />
+            <h1 className="discuss-vote-versus">
+              VS
+            </h1>
+            <DiscussVoteSelection
+              username={"곤드레밥길들이기"}
+              choose={"윤석열"}
+              isSelected={isSelectRight}
+              setIsSelect={setIsSelectRight}
+            />
+          </section>
+          <div
+            className="discuss-exit-btn"
+            style={{ marginTop: "42px", marginBottom: "39px" }}
+            onClick={goResult}
+          >
+            확인
+          </div>
+        </Card>
+      </div>
+    </>
   )
 }
