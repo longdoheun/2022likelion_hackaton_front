@@ -52,18 +52,10 @@ function Comments() {
         <div className="comments__number">
           참여자 수:{DUMMY_COMMENTS.length}명
         </div>
-        <div className="comments__color_select">
-          <p className="comments__color" id="all" />
-          <p className="comments__color" id="red" />
-          <p className="comments__color" id="blue" />
-        </div>
-
         {/* {commentData.map((list, index) => ( )*/}
-
         <CommentContent DUMMY_COMMENTS={DUMMY_COMMENTS[0]} />
         <CommentContent DUMMY_COMMENTS={DUMMY_COMMENTS[1]} />
         <CommentContent DUMMY_COMMENTS={DUMMY_COMMENTS[2]} />
-        
       </Card>
       <div className="comments_form">
         <form className="comments__input">

@@ -4,7 +4,6 @@ import "../../css/BalanceGameList.css";
 import axios from "axios";
 import BalanceGameListCard from "./BalanceGameListCard";
 import SubNavBar from "../../UI/SubNavBar";
-import showList from "../../images/show-list.png";
 import filterBtn from "../../images/issue-filter-btn.png";
 import isFilteredBtn from "../../images/filter-btn.png";
 
@@ -44,28 +43,12 @@ function BalanceGameList(props) {
 
   const totalVote = DUMMY_VOTER[0].length + DUMMY_VOTER[1].length;
 
-  const [isClickList, setIsCLickList] = useState(false);
-
-  const listClickHandler = () => {
-    setIsCLickList(true);
-  };
-
   return (
     <>
       <SubNavBar onClick={() => navigate("/")} text={"밸런스 게임"} />
       <section className="balance-game-list_upper">
-        <div className="balance-game__order_list">
-          <div onClick={listClickHandler}>
-            <span className="balance-game__vote_list_text">투표자 많은 순</span>
-            <img src={showList} alt="showList" />
-          </div>
-          <div className="balance-game__select_list">
-            <div className="balance-game__select_list_element" id="LOVE_NUM">찜 많은 순</div>
-            <div className="balance-game__select_list_element" id="RECENT_NUM">최신순</div>
-          </div>
-        </div>
-        <div className="balance-game__list_filter">
-          <div className="balance-game__list_filter_img">
+        <div className="balance-game__issue_filter">
+          <div className="balance-game__issue_filter_img">
             <div>
               <img id="isfilter_btn" src={isFilteredBtn} alt="isFilteredBtn" />
             </div>
@@ -73,7 +56,7 @@ function BalanceGameList(props) {
               <img id="filter-btn" src={filterBtn} alt="filterBtn" />
             </div>
           </div>
-          <div className="balance-game__list_filter">시사 이슈 게시물 보기</div>
+          <div className="balance-game__issue_filter_text">시사 이슈 게시물 보기</div>
         </div>
       </section>
 
