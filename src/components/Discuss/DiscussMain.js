@@ -1,21 +1,20 @@
 import React from "react";
-import DiscussAlert from './DiscussAlert';
+import { useNavigate } from "react-router-dom";
+import SubNavBar from "../../UI/SubNavBar";
 import DiscussCard from "./DiscussCard";
-import DiscussVote from "./DiscussVote";
-import DiscussResult from "./DiscussResult";
-import DiscussTalk from "./DiscussTalk";
 import DiscussLoading from "./DiscussLoading";
 
-function DiscussMain() {
+function DiscussMain(props) {
+  const navigate = useNavigate();
   return (
     <>
-     <DiscussLoading loading_type={"vote"} />
-        <DiscussLoading loading_type={"match"} />
-        <DiscussCard />
-        <DiscussAlert />
-        <DiscussVote />
-        <DiscussResult />
-        <DiscussTalk />
+      <SubNavBar
+        onClick={()=>navigate("/")}
+        text={"1:1 토론"}
+      />
+      <DiscussCard />
+      <DiscussLoading loading_type={"vote"} />
+      <DiscussLoading loading_type={"match"} />
     </>
   );
 }

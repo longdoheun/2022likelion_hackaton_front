@@ -1,9 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 import Card from "../../UI/Card";
 import "../../css/DiscussAlert.css";
+import DiscussCardBtn from "./DiscussCardBtn";
 
 export default function DiscussAlert(props) {
-  const { } = props;
+  const { setIsAlert } = props;
+  const navigate = useNavigate();
+
+  const REMAIN = {
+    click: () => setIsAlert(false),
+    text: "계속싸우기"
+  };
+  const EXIT = {
+    click: () => navigate(`/discussion`),
+    text: "나가기"
+  };
 
   return (
     <Card className={"discuss-alert flex-c"}>
@@ -17,10 +29,10 @@ export default function DiscussAlert(props) {
           진짜 나가시겠습니까?
         </h3>
       </section>
-      <section className="dicuss-card-btn flex-r">
-        <div className="join-btn">계속싸우기</div>
-        <div className="watch-btn">나가기</div>
-      </section>
+      <DiscussCardBtn
+        firstBtn={ REMAIN }
+        secondBtn={ EXIT }
+      />
     </Card>
   )
 }

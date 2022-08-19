@@ -1,0 +1,34 @@
+.subNavBar {
+  position: sticky;
+  top: 48px;
+  background: #e4e4e4;
+  width: 100%;
+}
+
+.subNavBar-con {
+  margin: auto;
+  width: calc(100% - 30px);
+  justify-content: space-between;
+  align-items: center;
+  /*  */
+  height: 48px;
+}
+
+.current-page-info {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  /* top2 */
+  color: #636363;
+}
+.go-back-btn {
+  width: 24px;
+  height: 15px;
+}
+.second-btn {
+  width: 24px;
+  height: 15px;
+}

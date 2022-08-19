@@ -11,7 +11,7 @@ function Main() {
         <Link to="/balancegame">
           <BalanceGameBtn />
         </Link>
-        <Link to="/discuss">
+        <Link to="/discussion">
           <DiscussBtn />
         </Link>
       </div>
