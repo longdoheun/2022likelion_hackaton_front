@@ -21,6 +21,10 @@
 .discuss-chat-cross-btn {
   height: 15px;
   width: 15px;
+  transition: 0.5s all;
+}
+.true {
+  transform: rotate(45deg);
 }
 .discuss-chat-input {
   width: 70%;

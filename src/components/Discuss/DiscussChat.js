@@ -9,14 +9,7 @@ import CROSS_IMG from "../../images/cross.svg";
 export default function DiscussChat(props) {
   const { } = props;
   const [more, setMore] = useState(false);
-
-  useEffect(() => {
-    
-  }, [more])
-
-  const CROSS_ROTATION = {
-    transfrom: "rotate(45deg)"
-  }
+  const [cross, setCross] = useState()
 
   const toggle = () => {
     const check = more ? false : true;
@@ -30,10 +23,9 @@ export default function DiscussChat(props) {
           <img
             src={CROSS_IMG}
             alt="CROSS_IMG"
-            className="discuss-chat-cross-btn"
-            style={CROSS_ROTATION}
+            className={`discuss-chat-cross-btn ${more}`}
             onClick={toggle}
-          />
+          /> 
           <input
             type="text"
             className="discuss-chat-input"
