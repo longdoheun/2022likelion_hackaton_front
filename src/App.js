@@ -26,14 +26,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/balancegame" element={<BalanceGameMain />}></Route>
+          <Route path="/balancegame" element={<BalanceGameList />}></Route>
           <Route path="/discussion" element={<DiscussMain />}></Route>
           <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
           <Route path="/discussion/vote" element={<DiscussVote />}></Route>
           <Route path="/discussion/result" element={<DiscussResult />}></Route>
-          <Route path="/balancegame/" element={<BalanceGameList />}></Route>
           <Route path="/balancegame/main" element={<BalanceGameMain />}></Route>
-          <Route path="/discuss" element={<DiscussMain />}></Route>
           <Route path="*" element={<NotFound />}></Route>
           <Route path="/mypage" element={<MyProfile />}></Route>
         </Routes>

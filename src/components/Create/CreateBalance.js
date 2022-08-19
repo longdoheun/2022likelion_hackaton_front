@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class CreateForm extends Component {
   state = {
-    questionType:'',
+    questionType:['balance','discuss'],
     subject: '',
     prosTitle: '',
     prosDesc:'',
@@ -34,6 +34,7 @@ class CreateForm extends Component {
   }
   render() {
     return (
+      // <input type="radio" name="qustionType" value="balance" checked="checked"></input>
       <form onSubmit={this.handleSubmit}>
         <input
           value={this.state.name}

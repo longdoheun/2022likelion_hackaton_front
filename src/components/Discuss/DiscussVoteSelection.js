@@ -3,7 +3,7 @@ import NOT_CHECKED from "../../images/circle-check.svg";
 import CHECKED from "../../images/red-circle-check.svg";
 
 export default function DiscussVoteSelection(props) {
-  const { username, choose, isSelected, setIsSelect } = props;
+  const { username, opinion, isSelected, setIsSelect } = props;
   const changeCheck = () => {
     setIsSelect(!isSelected);
   };
@@ -14,7 +14,7 @@ export default function DiscussVoteSelection(props) {
         {username}
       </h5>
       <h1 className="diccuss-vote-selection-choose">
-        {choose}
+        {opinion}
       </h1>
       {!isSelected &&
         <img
