@@ -3,6 +3,7 @@
   top: 48px;
   background: #e4e4e4;
   width: 100%;
+  z-index: 5;
 }
 
 .subNavBar-con {
