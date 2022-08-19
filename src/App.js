@@ -6,9 +6,10 @@ import BalanceGameList from './components/BalanceGame/BalanceGameList';
 import BalanceGameMain from './components/BalanceGame/BalanceGameMain';
 import NotFound from "./components/NotFound";
 import Main from "./components/Main";
+import MyPage from "./components/MyPage/MyProfile";
+import Footer from "./components/Footer";
 
 //components
-
 
 //css
 import "./App.css";
@@ -16,6 +17,7 @@ import "./css/Header.css";
 import DiscussResult from "./components/Discuss/DiscussResult";
 import DiscussVote from "./components/Discuss/DiscussVote";
 import DiscussTalkMain from "./components/Discuss/DiscussTalkMain";
+import MyProfile from "./components/MyPage/MyProfile";
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
           <Route path="/discussion/result" element={<DiscussResult />}></Route>
           <Route path="/balancegame/main" element={<BalanceGameMain />}></Route>
           <Route path="*" element={<NotFound />}></Route>
+          <Route path="/mypage" element={<MyProfile />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

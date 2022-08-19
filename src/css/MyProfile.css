@@ -1,0 +1,105 @@
+.my-info {
+    width: 95%;
+    height: 151px;
+    left: 17px;
+    margin-top:126px;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    padding-top: 85px;
+    margin-bottom: 8px;
+}
+
+.my-nickname, .my-id, .my-email {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 21px 9px 23px;
+}
+
+.my-list1, .my-list2, .my-list3{
+    width: 95%;
+    height: 36px;
+    left: 17px;
+    top: 438px;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.my-info-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3A3A3A;
+}
+
+.my-info-content{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #3A3A3A;
+}
+
+.my-list-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3A3A3A;
+    margin-left: 23px;
+}
+
+.show-detail{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #A5A5A5;
+    margin-right: 21px;
+}
+
+.modifyBtn {
+    box-sizing: border-box;
+    padding: 6px 17px;
+    width: 127px;
+    height: 31px;
+    margin: 0 100px;
+    background: #FFFFFF;
+    border: 0.8px solid #D4D4D4;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 39px;
+}
+
+.modifyTxt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #787878;
+}
+
+.mypic{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+    margin-top: 171px;
+    z-index: 0;
+}

@@ -27,7 +27,7 @@ function Header(props) {
           />
           <Modal open={modalOpen} close={closeModal}></Modal>
           <img
-            onClick={()=>navigate("/")}
+            onClick={()=>navigate("/mypage")}
             src={USER}
             alt="user.img"
             className="header-user"

@@ -5,6 +5,8 @@ import BalanceGameBtn from "./BalanceGame/BalanceGameBtn";
 import DiscussBtn from "./Discuss/DiscussBtn";
 import MainSearchIcon from "../images/main-search-icon.png";
 import '../css/Main.css'
+import MyInfo from "./MyPage/MyProfile.js";
+import MyProfile from "./MyPage/MyProfile.js";
 import "../css/Footer.css";
 import Footer from "./Footer";
 
