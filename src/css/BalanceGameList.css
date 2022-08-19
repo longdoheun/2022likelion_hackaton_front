@@ -24,23 +24,44 @@
 .balance-game__vote_list {
   cursor: pointer;
 }
-.balance-game__list_filter{
-  width: 128px;
+.balance-game__list_filter {
+  /* width: 128px; */
   display: flex;
 }
-.balance-game__list_filter{
+.balance-game__list_filter {
   margin-left: 3px;
 }
-.balance-game__list_filter_btn{
+.balance-game__list_filter_btn {
   padding-top: 3px;
 }
-.balance-game__list_filter_img{
+.balance-game__list_filter_img {
   display: flex;
   width: 20px;
 }
-#isfilter_btn{
+#isfilter_btn {
   display: inline;
 }
-#filter-btn{
+#filter-btn {
   position: relative;
+}
+.toggle-btn-cover {
+  width: 40px;
+  height: 15px;
+  border-radius: 7.5px;
+  /* padding: 10px; */
+  /* border-radius: 10px; */
+  background-color: #adadad;
+  display: flex;
+  flex-direction: row;
+}
+.toggle-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 1s all;
+}
+#toggle-on {
+  margin-left: 25px;
+  /* flex-direction: row-reverse; */
 }
