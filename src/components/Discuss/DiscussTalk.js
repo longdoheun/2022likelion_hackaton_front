@@ -1,5 +1,6 @@
 import React from "react";
-import {useHistory} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import  queryString from "query-string"
 //css
 import "../../css/DiscussTalk.css";
 //components
@@ -14,6 +15,8 @@ import profile2 from "../../images/profile-sample2.png";
 
 export default function DiscussTalk(props) {
   const { } = props;
+  const location = useLocation();
+  const { opinion } = queryString.parse(location.search);
 
   //예상 
   const DUMMY = [
@@ -21,13 +24,13 @@ export default function DiscussTalk(props) {
       opinion: "윤석열",
       username: "귀신이고칼로리",
       profile: profile1,
-      text: "안녕하세요 건기제를 좋아하는 김건기입니다."
+      text: "윤석열 최고"
     },
     {
       opinion: "이재명",
       username: "곤드레밥길들이기",
       profile: profile2,
-      text: "특잇값 분해는 스펙트럼분해의 일반적인 형태로 차원을 축소하는데 활용된다. 모든 행렬에 대해 분해가능하다는 것이 장점이다."
+      text: "이재명 최고"
     },
     {
       opinion: "이재명",
@@ -67,11 +70,13 @@ export default function DiscussTalk(props) {
     },
   ]
   // 사용자 한명을 기준으로
-  const left = "윤석열";
+  const oppositeOpinion = opinion === "이재명" ? "윤석열" : "이재명"
+  const myOpinion = opinion === "이재명" ? "이재명" : "윤석열"
+
 
   const checkDirection = (opinion) => {
     let direction;
-    if (opinion === left) {
+    if (opinion === oppositeOpinion) {
       direction = "row"
     } else {
       direction = "row-reverse"
@@ -93,12 +98,12 @@ export default function DiscussTalk(props) {
         <section className="discuss-talk-info-con">
           <div className="discuss-talk-info-cover flex-r">
             <DiscussTalkInfo
-              opinion={"이재명"}
+              opinion={oppositeOpinion}
               direction="left"
             />
             <h1 className="discuss-talk-versus">VS</h1>
             <DiscussTalkInfo
-              opinion={ "윤석열"}
+              opinion={myOpinion}
               direction={"right"}
             />
           </div>

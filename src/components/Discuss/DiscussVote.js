@@ -12,7 +12,7 @@ export default function DiscussVote(props) {
   const { } = props;
   const navigate = useNavigate();
   const location = useLocation();
-  const { content } = queryString.parse(location.search);
+  const { content, type } = queryString.parse(location.search);
 
   const [isSelectLeft, setIsSelectLeft] = useState(false);
   const [isSelectRight, setIsSelectRight] = useState(false);
@@ -22,7 +22,7 @@ export default function DiscussVote(props) {
   }
   const goResult = () => {
     if (isSelectLeft || isSelectRight) {
-      navigate(`/discussion/talk/?content=${content}&opinion=${"김동찬"}`);
+      navigate(`/discussion/talk/?content=${content}&type=${type}&opinion=${(isSelectLeft&&"이재명")||(isSelectRight&&"윤석열")}`);
     } else {
       const message = "동의하는 입장에 체크해주세요"
       window.alert(message);
@@ -60,23 +60,21 @@ export default function DiscussVote(props) {
         </p>
         <Card className={"discuss-vote flex-c"}>
           <section className="discuss-vote-upper">
-            <h1 className="discuss-vote-fin">
-            토론 종료
-            </h1>
+            <h1 className="discuss-vote-fin">자유토론</h1>
             <h5 className="diccuss-vote-guide">
-              설득 당했던 입장에 투표해주세요!
+              토론 입장에 투표해주세요!
             </h5>
           </section>
           <div
             className="diccuss-vote-review"
             onClick = {()=>navigate(-1)}
           >
-            토론 내용 다시보기
+            다른 토론 선택하기
           </div>
           <section className="discuss-vote-center flex-r">
             <DiscussVoteSelection
               username={"귀신이고칼로리"}
-              choose={"이재명"}
+              opinion={"이재명"}
               isSelected={isSelectLeft}
               setIsSelect={setIsSelectLeft}
             />
@@ -85,7 +83,7 @@ export default function DiscussVote(props) {
             </h1>
             <DiscussVoteSelection
               username={"곤드레밥길들이기"}
-              choose={"윤석열"}
+              opinion={"윤석열"}
               isSelected={isSelectRight}
               setIsSelect={setIsSelectRight}
             />

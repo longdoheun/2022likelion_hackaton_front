@@ -1,6 +1,6 @@
 .discuss-chat-con {
   width: 100%;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 .discuss-chat-main {

@@ -10,15 +10,15 @@ export default function Talk(props) {
   }
   return (
     <div className="talk-con">
+                <div
+            className="talk-username flex-r"
+            style={{ flexDirection: direction }}
+          >{username}</div>
       <section
         className="talk-cover flex-r"
         style={{ flexDirection: direction }}>
           <img src={profile} alt="profile-img" className="talk-profile" />
         <section className="talk-right">
-          <div
-            className="talk-username flex-r"
-            style={{ flexDirection: direction }}
-          >{username}</div>
           <div 
             className= "talk-cloud flex-r"
             style={{ flexDirection: direction }}

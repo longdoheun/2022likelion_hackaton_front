@@ -18,12 +18,12 @@ export default function DiscussCard(props) {
 
   //버튼과 url
   const JOIN = {
-    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}`),
+    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}&type=join`),
     text: "참여하기"
   }
 
   const WATCH = {
-    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}`),
+    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}&type=watch`),
     text: "관전하기"
   }
 

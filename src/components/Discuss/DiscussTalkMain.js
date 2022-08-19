@@ -14,19 +14,21 @@ export default function DiscussTalkMain(props) {
   const navigate = useNavigate();
 
   const location = useLocation();
-  const { content, opinion } = queryString.parse(location.search);
+  const { content, opinion, type } = queryString.parse(location.search);
 
   return (
     <>
       <SubNavBar
-        onClick={() => navigate(`/discussion/vote/?content=${content}`)}
+        onClick={() => navigate(-1)}
         text={content}
       />
       {/* {isAlert && <DiscussAlert
         setIsAlert={setIsAlert}
       ></DiscussAlert>} */}
-      <DiscussTalk></DiscussTalk>
-      <DiscussChat></DiscussChat>
+      <DiscussTalk
+        opinion={opinion}
+      ></DiscussTalk>
+      {type==="join"&&<DiscussChat></DiscussChat>}
     </>
   )
 }
