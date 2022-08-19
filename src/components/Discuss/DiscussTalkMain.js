@@ -13,35 +13,18 @@ export default function DiscussTalkMain(props) {
   const { } = props;
   const navigate = useNavigate();
 
-  const [isAlert, setIsAlert] = useState(true);
-  const [timeLimit, setTimeLimit] = useState(5000);
-  
   const location = useLocation();
-  const { content } = queryString.parse(location.search);
+  const { content, opinion } = queryString.parse(location.search);
 
-  useEffect(() => {
-    if (timeLimit != 0) {
-      //제한시간 예시
-      setTimeout(() => {
-        setTimeLimit(timeLimit - 1);
-      }, 1);
-    }
-    else if (timeLimit === 0) {
-      navigate(`/discussion/vote/${location.search}`);
-    };
-  });
-
-  usePrompt('지금 나가시면 패배입니다. 진짜로 나가시겠습니까?', timeLimit !== 0);
   return (
     <>
       <SubNavBar
-        onClick={()=>navigate("/discussion")}
+        onClick={() => navigate(`/discussion/vote/?content=${content}`)}
         text={content}
       />
-      <div>{ timeLimit }</div>
-      {isAlert && <DiscussAlert
+      {/* {isAlert && <DiscussAlert
         setIsAlert={setIsAlert}
-      ></DiscussAlert>}
+      ></DiscussAlert>} */}
       <DiscussTalk></DiscussTalk>
       <DiscussChat></DiscussChat>
     </>

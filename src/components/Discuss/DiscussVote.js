@@ -22,9 +22,9 @@ export default function DiscussVote(props) {
   }
   const goResult = () => {
     if (isSelectLeft || isSelectRight) {
-      navigate(`/discussion/result/?content=${content}`);
+      navigate(`/discussion/talk/?content=${content}&opinion=${"김동찬"}`);
     } else {
-      const message = "message"
+      const message = "동의하는 입장에 체크해주세요"
       window.alert(message);
     }
   }
@@ -51,7 +51,7 @@ export default function DiscussVote(props) {
   return (
     <>
       <SubNavBar
-        onClick={()=>navigate(`/discussion/talk/?content=${content}`)}
+        onClick={()=>navigate(-1)}
         text={content}
       />
       <div className="discuss-vote-container">
