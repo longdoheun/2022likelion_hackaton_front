@@ -24,7 +24,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/balancegame" element={<BalanceGameMain />}></Route>
           <Route path="/discussion" element={<DiscussMain />}></Route>
           <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
           <Route path="/discussion/vote" element={<DiscussVote />}></Route>

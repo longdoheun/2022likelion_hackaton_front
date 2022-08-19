@@ -4,7 +4,7 @@ import "../../css/BalanceGameCard.css";
 import HeartBtn from "../../UI/HeartBtn";
 import Vote from "./Vote";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function BalanceGameListCard(props) {
   // const [balanceGameVoter, setBalanceGameVoter] = useState([]);
@@ -66,7 +66,7 @@ function BalanceGameListCard(props) {
         </section>
 
         <div className="balance-game__vote_num">투표자 수 : {props.totalVote}명</div>
-        <Link to="/balancegame/main" style={{ textDecoration: "none" }}>
+        <Link to= {'/balancegame/main/'} style={{ textDecoration: "none" }}>
           <Vote className="balance-game__revote" text="투표하기"></Vote>
         </Link>
       </Card>
