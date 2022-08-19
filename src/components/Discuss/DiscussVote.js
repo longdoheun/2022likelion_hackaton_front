@@ -51,7 +51,7 @@ export default function DiscussVote(props) {
   return (
     <>
       <SubNavBar
-        onClick={()=>navigate(-1)}
+        onClick={()=>navigate(`/discussion`)}
         text={content}
       />
       <div className="discuss-vote-container">
