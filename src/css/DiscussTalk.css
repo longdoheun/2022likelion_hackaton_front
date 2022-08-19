@@ -1,19 +1,24 @@
 .discuss-talk-con {
   margin-top: 16px;
-  width: 332px;
+  /* width: 332px; */
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
 }
 .discuss-talk-upper {
   justify-content: space-between;
 }
 .discuss-talk {
+  max-width: 900px;
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px;
 }
 .discuss-talk-info-con {
   width: 100%;
   background: #e4e4e4;
   /* box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.03); */
   border-radius: 10px 10px 0px 0px;
+  height: 48px;
 }
 .discuss-talk-info-cover {
   margin: 10px 12px 4px 12px;
@@ -39,22 +44,20 @@
   font-size: 12px;
   line-height: 14px;
   /* identical to box height */
-
   text-align: center;
-
   color: #7a7a7a;
 }
 .discuss-talk-info-choose {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 14px;
   /* identical to box height */
   color: #5c5c5c;
 }
 .discuss-talk-main {
   width: 100%;
-  height: 443px;
+  height: 600px;
   overflow: scroll;
 }

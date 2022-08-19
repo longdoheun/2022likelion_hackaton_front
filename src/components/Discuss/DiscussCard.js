@@ -14,24 +14,19 @@ export default function DiscussCard(props) {
     hashtag: ["이슈", "고전", "길도흔", "입니다"],
     context: "2022 대선후보",
     watcher: 734,
-    type: "join"
   }
 
   //버튼과 url
   const JOIN = {
-    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
+    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}&type=join`),
     text: "참여하기"
   }
-  const VIEW = {
-    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
-    text: "자세히 보기"
-  }
+
   const WATCH = {
-    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
+    click: ()=>navigate(`/discussion/vote/?content=${DUMMY.context}&type=watch`),
     text: "관전하기"
   }
 
-  const isType = DUMMY.type === "join" ? true : false;
 
   return (
     <Card className={"discuss-card flex-c"}>
@@ -47,14 +42,10 @@ export default function DiscussCard(props) {
       <section className="discuss-card-lower">
         관전자수 : { DUMMY.watcher }명
       </section>
-      {/* props로 받아서 참여/관전/여부를 확인함 */}
-      {!isType && <DiscussCardBtn
-        firstBtn={ VIEW }
-      />}
-      {isType && <DiscussCardBtn
+      <DiscussCardBtn
         firstBtn={ JOIN }
         secondBtn={ WATCH }
-      />}
+      />
     </Card>
   )
 }
