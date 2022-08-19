@@ -2,7 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import DiscussMain from "./components/Discuss/DiscussMain";
-import BalanceGameMain from "./components/BalanceGame/BalanceGameMain";
+import BalanceGameList from './components/BalanceGame/BalanceGameList';
+import BalanceGameMain from './components/BalanceGame/BalanceGameMain';
 import NotFound from "./components/NotFound";
 import Main from "./components/Main";
 import MyInfo from "./components/MyPage/MyInfo";
@@ -12,23 +13,28 @@ import MyInfo from "./components/MyPage/MyInfo";
 //css
 import "./App.css";
 import "./css/Header.css";
-import DiscussTalk from "./components/Discuss/DiscussTalk";
+import DiscussResult from "./components/Discuss/DiscussResult";
+import DiscussVote from "./components/Discuss/DiscussVote";
+import DiscussTalkMain from "./components/Discuss/DiscussTalkMain";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex-c">
       <BrowserRouter>
         <Header />
-
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
           <Route path="/discussion" element={<DiscussMain />}></Route>
-          <Route path="/discussion/talk" element={<DiscussTalk />}></Route>
+          <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
+          <Route path="/discussion/vote" element={<DiscussVote />}></Route>
+          <Route path="/discussion/result" element={<DiscussResult />}></Route>
+          <Route path="/balancegame/" element={<BalanceGameList />}></Route>
+          <Route path="/balancegame/main" element={<BalanceGameMain />}></Route>
+          <Route path="/discuss" element={<DiscussMain />}></Route>
           <Route path="*" element={<NotFound />}></Route>
           <Route path="/mypage" element={<MyInfo />}></Route>
         </Routes>
-
       </BrowserRouter>
     </div>
   );

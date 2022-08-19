@@ -46,12 +46,14 @@
   text-align: right;
   color: #929292;
 }
-.dicuss-card-btn {
+.dicuss-card-btn-cover {
   margin-top: 3px;
   width: 100%;
   border-top: 1px solid #e4e4e4;
 }
-.dicuss-card-btn > div {
+
+.dicuss-card-btn {
+  width: 100%;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -62,10 +64,6 @@
   padding: 13px 0px;
   text-align: center;
 }
-.join-btn {
-  width: 50%;
-}
-.watch-btn {
-  width: 50%;
+#second-btn {
   border-left: 1px solid #e4e4e4;
 }

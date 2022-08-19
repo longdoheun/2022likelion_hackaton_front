@@ -1,10 +1,11 @@
 import React from "react";
+import {useHistory} from "react-router-dom";
 //css
 import "../../css/DiscussTalk.css";
 //components
 import Card from "../../UI/Card";
-import DiscussTalkInfo from "./DiscussTalkInfo"
-import Talk from "./Talk"
+import DiscussTalkInfo from "./DiscussTalkInfo";
+import Talk from "./Talk";
 
 //프로필 이미지
 import profile1 from "../../images/profile-sample1.png";
@@ -13,7 +14,7 @@ import profile2 from "../../images/profile-sample2.png";
 
 export default function DiscussTalk(props) {
   const { } = props;
-  
+
   //예상 
   const DUMMY = [
     {

@@ -2,9 +2,12 @@ import React from "react";
 import Card from "../../UI/Card";
 import "../../css/DiscussCard.css";
 import Heartbtn from "../../UI/HeartBtn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import DiscussCardBtn from "./DiscussCardBtn";
+
 export default function DiscussCard(props) {
   const { } = props;
+  const navigate = useNavigate();
 
   // props로 받을 json
   const DUMMY = {
@@ -12,6 +15,20 @@ export default function DiscussCard(props) {
     context: "2022 대선후보",
     watcher: 734,
     type: "join"
+  }
+
+  //버튼과 url
+  const JOIN = {
+    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
+    text: "참여하기"
+  }
+  const VIEW = {
+    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
+    text: "자세히 보기"
+  }
+  const WATCH = {
+    click: ()=>navigate(`/discussion/talk/?content=${DUMMY.context}`),
+    text: "관전하기"
   }
 
   const isType = DUMMY.type === "join" ? true : false;
@@ -31,17 +48,13 @@ export default function DiscussCard(props) {
         관전자수 : { DUMMY.watcher }명
       </section>
       {/* props로 받아서 참여/관전/여부를 확인함 */}
-      {!isType&&<section className="dicuss-card-btn flex-r">
-        <div className="view-btn">자세히 보기</div>
-      </section>}
-      {isType && <section className="dicuss-card-btn flex-r">
-        <Link to={`/discuss/talk/?content=${DUMMY.context}`}>
-          <div className="join-btn">참여하기</div>
-        </Link>
-        <Link to={`/discuss/talk/?content=${DUMMY.context}`}>
-          <div className="watch-btn">관전하기</div>
-        </Link>
-      </section>}
+      {!isType && <DiscussCardBtn
+        firstBtn={ VIEW }
+      />}
+      {isType && <DiscussCardBtn
+        firstBtn={ JOIN }
+        secondBtn={ WATCH }
+      />}
     </Card>
   )
 }

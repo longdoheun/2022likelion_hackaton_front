@@ -1,12 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import MENU from "../images/menu.svg"
+import USER from "../images/user.svg"
 
 function Header(props) {
+  const navigate = useNavigate();
+
   return (
     <>
-      <Link to="/" className="header">
-        <h1>메인으로 가기</h1>
-      </Link>
+      <section className="header">
+        <div className="header-con flex-r">
+          <img
+            onClick={()=>navigate("/")}
+            src={MENU}
+            alt="menu.img"
+            className="header-menu"
+          />
+          <img
+            onClick={()=>navigate("/")}
+            src={USER}
+            alt="user.img"
+            className="header-user"
+          />
+        </div>
+      </section>
     </>
   );
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function DiscussBtn() {
   return (
     <>
-      <Link to="/discuss">
+      <Link to="/discussion">
         <button>Discuss</button>
       </Link>
     </>
