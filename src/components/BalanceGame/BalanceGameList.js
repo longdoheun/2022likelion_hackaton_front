@@ -8,6 +8,7 @@ import filterBtn from "../../images/issue-filter-btn.png";
 import isFilteredBtn from "../../images/filter-btn.png";
 
 function BalanceGameList(props) {
+  const [isIssue, setIsIssue] = useState(true);
   // const [balanceGameData, setBalanceGameData] = useState([]);
   // useEffect(() => {
   //   axios.get(url).then(({ bgData }) => setBalanceGameData(bgData));
@@ -35,7 +36,9 @@ function BalanceGameList(props) {
     },
   ];
   const navigate = useNavigate();
-
+  const changeIssue = () => {
+    setIsIssue(isIssue ? false : true);
+  }
   const DUMMY_VOTER = [
     ["e1", "e3", "e6", "e8"],
     ["e2", "e4", "e5"],
@@ -47,16 +50,11 @@ function BalanceGameList(props) {
     <>
       <SubNavBar onClick={() => navigate("/")} text={"밸런스 게임"} />
       <section className="balance-game-list_upper">
-        <div className="balance-game__issue_filter">
-          <div className="balance-game__issue_filter_img">
-            <div>
-              <img id="isfilter_btn" src={isFilteredBtn} alt="isFilteredBtn" />
-            </div>
-            <div>
-              <img id="filter-btn" src={filterBtn} alt="filterBtn" />
-            </div>
+        <div className="balance-game__list_filter">
+          <div className="toggle-btn-cover" onClick={changeIssue}>
+            <div className="toggle-btn" id={!isIssue&&"toggle-on"}></div>
           </div>
-          <div className="balance-game__issue_filter_text">시사 이슈 게시물 보기</div>
+          <div className="balance-game__list_filter">시사 이슈 게시물 보기</div>
         </div>
       </section>
 
