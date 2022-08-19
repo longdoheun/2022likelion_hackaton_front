@@ -22,7 +22,7 @@ export default function DiscussVote(props) {
   }
   const goResult = () => {
     if (isSelectLeft || isSelectRight) {
-      navigate(`/discussion/talk/?content=${content}&type=${type}&opinion=${(isSelectLeft&&"이재명")||(isSelectRight&&"윤석열")}`);
+      navigate(`/discussion/talk/?content=${content}&type=${type}&opinion=${(isSelectLeft&&"김동한")||(isSelectRight&&"김동찬")}`);
     } else {
       const message = "동의하는 입장에 체크해주세요"
       window.alert(message);
@@ -74,7 +74,7 @@ export default function DiscussVote(props) {
           <section className="discuss-vote-center flex-r">
             <DiscussVoteSelection
               username={"귀신이고칼로리"}
-              opinion={"이재명"}
+              opinion={"김동한"}
               isSelected={isSelectLeft}
               setIsSelect={setIsSelectLeft}
             />
@@ -83,7 +83,7 @@ export default function DiscussVote(props) {
             </h1>
             <DiscussVoteSelection
               username={"곤드레밥길들이기"}
-              opinion={"윤석열"}
+              opinion={"김동찬"}
               isSelected={isSelectRight}
               setIsSelect={setIsSelectRight}
             />

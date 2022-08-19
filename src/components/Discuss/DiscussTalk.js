@@ -21,57 +21,57 @@ export default function DiscussTalk(props) {
   //예상 
   const DUMMY = [
     {
-      opinion: "윤석열",
+      opinion: "김동찬",
       username: "귀신이고칼로리",
       profile: profile1,
-      text: "윤석열 최고"
+      text: "김동찬 최고"
     },
     {
-      opinion: "이재명",
+      opinion: "김동한",
       username: "곤드레밥길들이기",
       profile: profile2,
-      text: "이재명 최고"
+      text: "김동한 최고"
     },
     {
-      opinion: "이재명",
+      opinion: "김동한",
       username: "귀신이고칼로리",
       profile: profile1,
       text: "안녕하세요 건기제를 좋아하는 김건기입니다."
     },
     {
-      opinion: "윤석열",
-      username: "곤드레밥길들이기",
-      profile: profile2,
-      text: "특잇값 분해는 스펙트럼분해의 일반적인 형태로 차원을 축소하는데 활용된다. 모든 행렬에 대해 분해가능하다는 것이 장점이다."
-    },
-    {
-      opinion: "윤석열",
-      username: "귀신이고칼로리",
-      profile: profile1,
-      text: "안녕하세요 건기제를 좋아하는 김건기입니다."
-    },
-    {
-      opinion: "이재명",
-      username: "귀신이고칼로리",
-      profile: profile1,
-      text: "안녕하세요 건기제를 좋아하는 김건기입니다."
-    },
-    {
-      opinion: "윤석열",
+      opinion: "김동찬",
       username: "곤드레밥길들이기",
       profile: profile2,
       text: "특잇값 분해는 스펙트럼분해의 일반적인 형태로 차원을 축소하는데 활용된다. 모든 행렬에 대해 분해가능하다는 것이 장점이다."
     },
     {
-      opinion: "이재명",
+      opinion: "김동찬",
+      username: "귀신이고칼로리",
+      profile: profile1,
+      text: "안녕하세요 건기제를 좋아하는 김건기입니다."
+    },
+    {
+      opinion: "김동한",
+      username: "귀신이고칼로리",
+      profile: profile1,
+      text: "안녕하세요 건기제를 좋아하는 김건기입니다."
+    },
+    {
+      opinion: "김동찬",
+      username: "곤드레밥길들이기",
+      profile: profile2,
+      text: "특잇값 분해는 스펙트럼분해의 일반적인 형태로 차원을 축소하는데 활용된다. 모든 행렬에 대해 분해가능하다는 것이 장점이다."
+    },
+    {
+      opinion: "김동한",
       username: "곤드레밥길들이기",
       profile: profile2,
       text: "특잇값 분해는 스펙트럼분해의 일반적인 형태로 차원을 축소하는데 활용된다. 모든 행렬에 대해 분해가능하다는 것이 장점이다."
     },
   ]
   // 사용자 한명을 기준으로
-  const oppositeOpinion = opinion === "이재명" ? "윤석열" : "이재명"
-  const myOpinion = opinion === "이재명" ? "이재명" : "윤석열"
+  const myOpinion = opinion === "김동한" ? "김동한" : "김동찬"
+  const oppositeOpinion= opinion === "김동한" ? "김동찬" : "김동한"
 
 
   const checkDirection = (opinion) => {

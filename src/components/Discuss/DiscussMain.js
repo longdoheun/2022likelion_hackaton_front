@@ -13,8 +13,6 @@ function DiscussMain(props) {
         text={"자유 토론"}
       />
       <DiscussCard />
-      {/* <DiscussLoading loading_type={"vote"} /> */}
-      {/* <DiscussLoading loading_type={"match"} /> */}
     </>
   );
 }

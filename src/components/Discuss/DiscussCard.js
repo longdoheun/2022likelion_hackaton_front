@@ -11,7 +11,7 @@ export default function DiscussCard(props) {
 
   // props로 받을 json
   const DUMMY = {
-    hashtag: ["이슈", "고전", "길도흔", "입니다"],
+    hashtag: ["이슈", "고전"],
     context: "2022 대선후보",
     watcher: 734,
   }
