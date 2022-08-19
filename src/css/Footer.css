@@ -1,0 +1,39 @@
+.footer-box{
+  
+  width:100%;
+  text-align: left;
+  background-color: white;
+}
+.footer-content{
+  margin:3%;
+}
+.footer-logo{
+  margin-bottom:1%;
+
+}
+.footer-main-text{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 153.19%;
+
+  color: #787878;
+  margin-bottom:1%;
+}
+.footer-sub-text{
+  font-weight: 400;
+font-size: 8px;
+  line-height: 153.19%;
+  
+  color: #B9B9B9;
+  margin-bottom:1%;
+
+}
+.footer-last-text{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 153.19%;
+  color: #787878;
+  margin-bottom:1%;
+
+  
+}

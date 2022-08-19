@@ -1,0 +1,40 @@
+
+.main-discuss-btn-box{
+    overflow: hidden;
+    text-align: left;
+    background-color: white;
+    color: black;
+    border:none;
+    width: 45%;
+    margin-left: 5%;
+    height: 160px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-decoration: none !important;
+}
+
+.main-discuss-btn-text{
+    display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+}
+.main-discuss-btn-name{
+    
+    margin: 20px 0px 0px 12px;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none !important;
+}
+.main-discuss-btn-detail{
+    margin: 0px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none !important;
+}
+.main-discuss-btn-icon{
+    float: right;
+    height: 60px;
+width: 64px;
+margin: 0px 11px;
+
+}

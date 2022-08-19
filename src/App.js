@@ -6,6 +6,7 @@ import BalanceGameList from './components/BalanceGame/BalanceGameList';
 import BalanceGameMain from './components/BalanceGame/BalanceGameMain';
 import NotFound from "./components/NotFound";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 //components
 
@@ -25,6 +26,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
+=======
+>>>>>>> 83387cf04f3fbb754ec7333a4e9207a81bcbc918
           <Route path="/discussion" element={<DiscussMain />}></Route>
           <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
           <Route path="/discussion/vote" element={<DiscussVote />}></Route>
