@@ -6,7 +6,7 @@ import BalanceGameList from './components/BalanceGame/BalanceGameList';
 import BalanceGameMain from './components/BalanceGame/BalanceGameMain';
 import NotFound from "./components/NotFound";
 import Main from "./components/Main";
-import MyInfo from "./components/MyPage/MyInfo";
+import MyProfile from "./components/MyPage/MyProfile";
 
 //components
 
@@ -33,7 +33,7 @@ function App() {
           <Route path="/balancegame/main" element={<BalanceGameMain />}></Route>
           <Route path="/discuss" element={<DiscussMain />}></Route>
           <Route path="*" element={<NotFound />}></Route>
-          <Route path="/mypage" element={<MyInfo />}></Route>
+          <Route path="/mypage" element={<MyProfile />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

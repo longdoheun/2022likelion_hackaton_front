@@ -1,6 +1,7 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
-function MyInfo () {
+function MyProfile () {
     const DUMMY_LISTS = [
         {
             nickname: "소고기딱복국",
@@ -23,12 +24,10 @@ function MyInfo () {
                 <span>닉네임</span>
                 <span>{DUMMY_LISTS[0].email}</span>
             </div>
-            <Link to="/mypage/modify">
-            <ModifyBtn className = "modify-btn" type="submit" value="회원정보 수정" />
-            </Link>
+            <Link to="/mypage/modify">회원정보 수정</Link>
         </div>
         </>
     )
 };
 
-export default MyInfo;
+export default MyProfile;

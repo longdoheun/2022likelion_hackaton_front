@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import BalanceGameBtn from "./BalanceGame/BalanceGameBtn";
 import DiscussBtn from "./Discuss/DiscussBtn";
 import '../css/Main.css'
-import MyInfo from "./MyPage/MYInfo";
+import MyInfo from "./MyPage/MyProfile.js";
+import MyProfile from "./MyPage/MyProfile.js";
 
 function Main() {
   return (
@@ -16,7 +17,7 @@ function Main() {
           <DiscussBtn />
         </Link>
         <Link to="/mypage">
-          <MyInfo />
+          <MyProfile />
         </Link>
       </div>
     </>
