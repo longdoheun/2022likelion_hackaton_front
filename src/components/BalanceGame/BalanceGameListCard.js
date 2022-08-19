@@ -27,7 +27,9 @@ function BalanceGameListCard(props) {
     <>
       <Card className={classes}>
         <section className="balance-game-card__upper">
-          <h5 className="balance-game-card__tag_user"></h5>
+          <h5 className="balance-game-card__tag_user">
+            {props.DUMMY_LISTS[0].tag.map((tag) => ` #${tag}`)}
+          </h5>
           <HeartBtn
             className="balance-game-list__heart"
             isLike={isLike}
@@ -35,7 +37,9 @@ function BalanceGameListCard(props) {
           />
         </section>
 
-        <h1 className="balance-game-card__context">{props.DUMMY_LISTS[0].title}</h1>
+        <h1 className="balance-game-card__context">
+          {props.DUMMY_LISTS[0].title}
+        </h1>
 
         <section className="balance-game-card__center">
           <section className="balance-game-card__main_bar">
@@ -65,9 +69,17 @@ function BalanceGameListCard(props) {
           </section>
         </section>
 
-        <div className="balance-game__vote_num">투표자 수 : {props.totalVote}명</div>
+        <div className="balance-game__vote_num">
+          투표자 수 : {props.totalVote}명
+        </div>
         {/* <Link to= {'/balancegame/main/'} style={{ textDecoration: "none" }}> */}
-          <Vote className="balance-game__revote" text="투표하기" onClick={()=>navigate(`/balancegame/main/?context=${props.DUMMY_LISTS[0].title}`)}></Vote>
+        <Vote
+          className="balance-game__revote"
+          text="투표하기"
+          onClick={() =>
+            navigate(`/balancegame/main/?context=${props.DUMMY_LISTS[0].title}`)
+          }
+        ></Vote>
         {/* </Link> */}
       </Card>
     </>
