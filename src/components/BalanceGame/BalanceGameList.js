@@ -47,13 +47,25 @@ function BalanceGameList(props) {
 
   const totalVote = DUMMY_VOTER[0].length + DUMMY_VOTER[1].length;
 
+  const [isClickList, setIsCLickList] = useState(false);
+
+  const listClickHandler = () => {
+    setIsCLickList(true);
+  };
+
   return (
     <>
       <SubNavBar onClick={() => navigate("/")} text={"밸런스 게임"} />
       <section className="balance-game-list_upper">
-        <div className="balance-game__vote_list">
-          <span className="balance-game__vote_list_text">투표자 많은 순</span>
-          <img src={showList} alt="showList" />
+        <div className="balance-game__order_list">
+          <div onClick={listClickHandler}>
+            <span className="balance-game__vote_list_text">투표자 많은 순</span>
+            <img src={showList} alt="showList" />
+          </div>
+          <div className="balance-game__select_list">
+            <div className="balance-game__select_list_element" id="LOVE_NUM">찜 많은 순</div>
+            <div className="balance-game__select_list_element" id="RECENT_NUM">최신순</div>
+          </div>
         </div>
         <div className="balance-game__list_filter">
           <div className="toggle-btn-cover" onClick={changeIssue}>

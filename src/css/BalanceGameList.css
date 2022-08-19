@@ -21,11 +21,22 @@
   font-size: 10px;
   color: #c0c0c0;
 }
-.balance-game__vote_list {
+.balance-game__order_list {
   cursor: pointer;
 }
+.balance-game__select_list {
+  position: relative;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+
+  border: soild black;
+}
+.balance-game__select_list_element {
+  padding: 2.5px;
+}
 .balance-game__list_filter {
-  /* width: 128px; */
   display: flex;
 }
 .balance-game__list_filter {
