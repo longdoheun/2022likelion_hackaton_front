@@ -7,14 +7,13 @@ import Vote from "./Vote";
 import axios from "axios";
 import BalanceGameCard from "./BalanceGameCard";
 import { Link } from "react-router-dom";
+import BalanceGameListCard from './BalanceGameListCard';
 
 function BalanceGameList(props) {
   // const [balanceGameData, setBalanceGameData] = useState([]);
   // useEffect(() => {
   //   axios.get(url).then(({ bgData }) => setBalanceGameData(bgData));
   // }, []);
-
-  const totalVote = "";
 
   const DUMMY_LISTS = [
     {
@@ -39,49 +38,22 @@ function BalanceGameList(props) {
     },
   ];
 
+  const DUMMY_VOTER = [
+    ["e1", "e3", "e6", "e8"],
+    ["e2", "e4", "e5"],
+  ];
+
+  const totalVote = DUMMY_VOTER[0].length + DUMMY_VOTER[1].length;
+
   {
     /* DUMMY_LISTS[0].title => list.title*/
   }
 
-  const [isLike, setLike] = useState(false);
-  const likeToggleHandler = () => {
-    setLike((isLike) => !isLike);
-  };
+  return (<>
+   {/* {balanceGameData.map((list, index) => ( )*/}
+    <BalanceGameListCard DUMMY_LISTS={DUMMY_LISTS} totalVote={totalVote}></BalanceGameListCard>
+  </>  )
 
-  const classes = "balance-game-card " + props.className;
-  const preventEventHandler = (e) => {
-    console.log("hi");
-  };
-
-  return (
-    <>
-      {/* {balanceGameData.map((list, index) => ( */}
-      <Card className={classes}>
-        {/* key={index} */}
-        <section className="balance-game-card__upper">
-          <h5 className="balance-game-card__tag_user"></h5>
-          <HeartBtn
-            className="balance-game-list__heart"
-            isLike={isLike}
-            onclick={likeToggleHandler}
-          />
-        </section>
-        <h1 className="balance-game-card__context">{DUMMY_LISTS[0].title}</h1>
-
-        <BalanceGameCenterBefore
-          DUMMY_LISTS={DUMMY_LISTS}
-          onclick={preventEventHandler}
-        />
-
-        <div className="balance-game__vote_num">투표자 수 : {totalVote}명</div>
-        <Link to="/balancegame/main" style={{ textDecoration: "none" }}>
-          <Vote className="balance-game__revote" text="투표하기"></Vote>
-        </Link>
-      </Card>
-
-      {/* ))} */}
-    </>
-  );
 }
 
 export default BalanceGameList;
