@@ -25,10 +25,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
-<<<<<<< HEAD
-
-=======
->>>>>>> 37312a2a1e79674336ae65c9c08c0c1458607721
           <Route path="/discussion" element={<DiscussMain />}></Route>
           <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
           <Route path="/discussion/vote" element={<DiscussVote />}></Route>

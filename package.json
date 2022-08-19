@@ -12,11 +12,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-    "recoil": "^0.7.5",
-=======
     "util": "^0.12.4",
->>>>>>> 37312a2a1e79674336ae65c9c08c0c1458607721
     "web-vitals": "^2.1.4"
   },
   "scripts": {
