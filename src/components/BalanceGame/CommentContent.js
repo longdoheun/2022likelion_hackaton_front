@@ -1,5 +1,4 @@
 import Reac0, { useState } from "react";
-import like from "../../images/like.png";
 import LikeBtn from "./../../UI/LikeBtn";
 
 function CommentContent({ DUMMY_COMMENTS, children }) {

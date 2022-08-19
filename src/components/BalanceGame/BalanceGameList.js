@@ -17,7 +17,7 @@ function BalanceGameList(props) {
     {
       id: "id1",
       user: "소고기딱복국",
-      tag: ["음식, 고전"],
+      tag: ["음식", "고전"],
       title: "탕수육 먹을 때",
       choiceLeft: "부먹",
       choiceRight: "찍먹",
@@ -27,7 +27,7 @@ function BalanceGameList(props) {
     {
       id: "id2",
       user: "꿈은없고요그냥놀고싶습니다",
-      tag: ["음식, 고전"],
+      tag: ["음식", "고전"],
       title: "복숭아 먹을 때",
       choiceLeft: "물복",
       choiceRight: "딱복",
