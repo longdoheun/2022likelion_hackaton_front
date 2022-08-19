@@ -25,7 +25,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />}></Route>
+<<<<<<< HEAD
           <Route path="/balancegame" element={<BalanceGameMain />}></Route>
+=======
+>>>>>>> 83387cf04f3fbb754ec7333a4e9207a81bcbc918
           <Route path="/discussion" element={<DiscussMain />}></Route>
           <Route path="/discussion/talk" element={<DiscussTalkMain />}></Route>
           <Route path="/discussion/vote" element={<DiscussVote />}></Route>
