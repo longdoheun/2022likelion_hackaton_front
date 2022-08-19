@@ -1,0 +1,46 @@
+
+.main-balancegame-create-btn-box{
+    overflow: hidden;
+/* 오류 때문에 적용못함
+    display: flex;
+  
+  justify-content: space-between; */
+    text-align: left;
+    color: white;
+    background-color: #CC0000;
+    border:none;
+    width: 95%;
+    height: 120px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-decoration: none !important;
+    margin:0px;
+}
+
+.main-balancegame-create-btn-text{
+    float:left;
+    display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+}
+.main-balancegame-create-btn-name{
+    
+    margin: 20px 0px 0px 12px;
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none !important;
+}
+.main-balancegame-create-btn-detail{
+    margin: 0px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    width: 184px;
+    text-decoration: none !important;
+}
+.main-balancegame-create-btn-icon{
+    float: right;
+    height: 83px;
+width: 73px;
+margin: 19px 11px;
+
+}
