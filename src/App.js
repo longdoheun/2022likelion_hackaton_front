@@ -6,7 +6,8 @@ import BalanceGameList from './components/BalanceGame/BalanceGameList';
 import BalanceGameMain from './components/BalanceGame/BalanceGameMain';
 import NotFound from "./components/NotFound";
 import Main from "./components/Main";
-import MyProfile from "./components/MyPage/MyProfile";
+import MyPage from "./components/MyPage/MyProfile";
+import Footer from "./components/Footer";
 
 //components
 
@@ -16,6 +17,7 @@ import "./css/Header.css";
 import DiscussResult from "./components/Discuss/DiscussResult";
 import DiscussVote from "./components/Discuss/DiscussVote";
 import DiscussTalkMain from "./components/Discuss/DiscussTalkMain";
+import MyProfile from "./components/MyPage/MyProfile";
 
 function App() {
   return (
