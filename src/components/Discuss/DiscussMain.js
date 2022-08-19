@@ -10,11 +10,11 @@ function DiscussMain(props) {
     <>
       <SubNavBar
         onClick={()=>navigate("/")}
-        text={"1:1 토론"}
+        text={"자유 토론"}
       />
       <DiscussCard />
-      <DiscussLoading loading_type={"vote"} />
-      <DiscussLoading loading_type={"match"} />
+      {/* <DiscussLoading loading_type={"vote"} /> */}
+      {/* <DiscussLoading loading_type={"match"} /> */}
     </>
   );
 }

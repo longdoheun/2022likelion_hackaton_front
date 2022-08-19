@@ -1,6 +1,6 @@
 .discuss-chat-con {
   width: 100%;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 .discuss-chat-main {
@@ -27,7 +27,7 @@
   transform: rotate(45deg);
 }
 .discuss-chat-input {
-  width: 70%;
+  width: 75%;
   padding: 13px 12px;
   height: 16px;
   border-radius: 30px;
