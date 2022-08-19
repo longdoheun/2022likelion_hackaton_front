@@ -8,7 +8,22 @@ import CROSS_IMG from "../../images/cross.svg";
 
 export default function DiscussChat(props) {
   const { } = props;
-  const [more, setMore] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const sendMessage = () => {
+    if (message) {
+      console.log(message);
+      setMessage("");
+    }
+  };
+
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+    else return;
+  }
+  
 
 
   return(
@@ -16,11 +31,15 @@ export default function DiscussChat(props) {
       <div className="discuss-chat-con">
         <section className="discuss-chat-main flex-r">
           <input
+            name="message"
+            value={message}
+            onChange={(e)=>setMessage(e.target.value)}
+            onKeyPress={onKeyPress}
             type="text"
             className="discuss-chat-input"
             placeholder="메시지를 입력하세요."
           />
-          <div className="discuss-chat-send">전송</div>
+          <div className="discuss-chat-send" onClick={sendMessage}>전송</div>
         </section>
       </div>
     </>
