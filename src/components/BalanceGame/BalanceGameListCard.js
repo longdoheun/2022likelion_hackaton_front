@@ -12,7 +12,7 @@ function BalanceGameListCard(props) {
   //   axios.get("url").then(({ voteData }) => setBalanceGameVoter(voteData));
   // }, []);
 
-
+  const navigate = useNavigate();
   const classes = "balance-game-card " + props.className;
 
   // const [leftChoice, setLeftChoice] = useState(balanceGameVoter[0].length);
@@ -66,9 +66,9 @@ function BalanceGameListCard(props) {
         </section>
 
         <div className="balance-game__vote_num">투표자 수 : {props.totalVote}명</div>
-        <Link to= {'/balancegame/main/'} style={{ textDecoration: "none" }}>
-          <Vote className="balance-game__revote" text="투표하기"></Vote>
-        </Link>
+        {/* <Link to= {'/balancegame/main/'} style={{ textDecoration: "none" }}> */}
+          <Vote className="balance-game__revote" text="투표하기" onClick={()=>navigate(`/balancegame/main/?context=${props.DUMMY_LISTS[0].title}`)}></Vote>
+        {/* </Link> */}
       </Card>
     </>
   );
