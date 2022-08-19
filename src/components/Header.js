@@ -6,9 +6,9 @@ import USER from "../images/user.svg"
 import Modal from '../components/Modal';
 
 function Header(props) {
+
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
-
   const openModal = () => {
     setModalOpen(true);
   };
@@ -25,7 +25,7 @@ function Header(props) {
             alt="menu.img"
             className="header-menu"
           />
-          <Modal open={modalOpen} close={closeModal} header="Modal heading"></Modal>
+          <Modal open={modalOpen} close={closeModal}></Modal>
           <img
             onClick={()=>navigate("/")}
             src={USER}
