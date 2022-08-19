@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../../UI/Card";
 import "../../css/BalanceGameCard.css";
 import HeartBtn from "../../UI/HeartBtn";
@@ -6,12 +7,15 @@ import BalanceGameCenterBefore from "./BalanceGameCenterBefore";
 import BalanceGameCenterAfter from "./BalanceGameCenterAfter";
 import Vote from "./Vote";
 import axios from "axios";
+import SubNavBar from "../../UI/SubNavBar";
+
 
 function BalanceGameCard(props) {
   // const [balanceGameVoter, setBalanceGameVoter] = useState([]);
   // useEffect(() => {
   //   axios.get("url").then(({ voteData }) => setBalanceGameVoter(voteData));
   // }, []);
+  const navigate = useNavigate();
 
   const DUMMY_LISTS = [
     {
@@ -94,6 +98,10 @@ function BalanceGameCard(props) {
 
   return (
     <>
+      <SubNavBar
+        onClick={()=>navigate("/")}
+        text={"밸런스 게임"}
+      />
       <Card className={classes}>
         <section className="balance-game-card__upper">
           <h5 className="balance-game-card__tag_user"></h5>

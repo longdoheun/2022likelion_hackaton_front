@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../../UI/Card";
 import "../../css/BalanceGameCard.css";
 import HeartBtn from "../../UI/HeartBtn";
@@ -8,13 +9,14 @@ import axios from "axios";
 import BalanceGameCard from "./BalanceGameCard";
 import { Link } from "react-router-dom";
 import BalanceGameListCard from './BalanceGameListCard';
+import SubNavBar from "../../UI/SubNavBar";
 
 function BalanceGameList(props) {
   // const [balanceGameData, setBalanceGameData] = useState([]);
   // useEffect(() => {
   //   axios.get(url).then(({ bgData }) => setBalanceGameData(bgData));
   // }, []);
-
+  const navigate = useNavigate();
   const DUMMY_LISTS = [
     {
       id: "id1",
@@ -50,6 +52,10 @@ function BalanceGameList(props) {
   }
 
   return (<>
+      <SubNavBar
+        onClick={()=>navigate("/")}
+        text={"밸런스 게임"}
+      />
    {/* {balanceGameData.map((list, index) => ( )*/}
     <BalanceGameListCard DUMMY_LISTS={DUMMY_LISTS} totalVote={totalVote}></BalanceGameListCard>
   </>  )
